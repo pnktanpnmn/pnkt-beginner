@@ -1,0 +1,53 @@
+Level 6
+
+The wall behind you feels a bit further away in this room. And you hear more cries for help.
+
+Tip: You can walk backward by passing 'backward' as an argument to warrior.walk_. Same goes for warrior.feel, warrior.rescue_ and warrior.attack_. Archers have a limited attack distance.
+
+ --------
+|C @ S aa|
+ --------
+
+
+  > = Stairs
+
+  @ = yukie (20 HP)
+
+  C = Captive (1 HP)
+
+  S = ThickSludge (24 HP)
+
+  a = Archer (7 HP)
+
+
+
+Warrior Abilities:
+
+
+  warrior.rest_
+    Gain 10% of max health back, but do nothing more.
+
+
+  warrior.feel
+    Returns a Space for the given direction (forward by default)
+
+
+  warrior.rescue_
+    Rescue a captive from his chains (earning 20 points)in given direction (forward by default)
+
+
+  warrior.health
+    Returns an integer representing your health.
+
+
+  warrior.attack_
+    Attacks a unit in given direction (forward by default).
+
+
+  warrior.walk_
+    Move in the given direction (forward by default).
+
+
+
+
+When you're done editing player.py, run `pythonwarrior` again.
