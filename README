@@ -1,23 +1,21 @@
-Level 6
+Level 7
 
-The wall behind you feels a bit further away in this room. And you hear more cries for help.
+You feel a wall right in front of you and an opening behind you.
 
-Tip: You can walk backward by passing 'backward' as an argument to warrior.walk_. Same goes for warrior.feel, warrior.rescue_ and warrior.attack_. Archers have a limited attack distance.
+Tip: You are not as effective at attacking backward. Use warrior.feel().is_wall() and warrior.pivot_() to turn around.
 
- --------
-|C @ S aa|
- --------
+ ------
+|>a S @|
+ ------
 
 
   > = Stairs
 
   @ = yukie (20 HP)
 
-  C = Captive (1 HP)
+  a = Archer (7 HP)
 
   S = ThickSludge (24 HP)
-
-  a = Archer (7 HP)
 
 
 
@@ -30,6 +28,10 @@ Warrior Abilities:
 
   warrior.feel
     Returns a Space for the given direction (forward by default)
+
+
+  warrior.pivot_
+    Rotate 'left', 'right', or 'backward' (default)
 
 
   warrior.rescue_

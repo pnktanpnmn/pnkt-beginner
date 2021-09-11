@@ -1,14 +1,14 @@
 class Player(object):
-    prev_health = 20
     def play_turn(self, warrior):
-        if warrior.feel().is_captive():
-            warrior.rescue_()
+        current = warrior.health()
+        if current < 20 and warrior.feel('backward').is_wall():
+            warrior.rest_()
+        elif current < 10:
+            warrior.walk_('backward')
+        elif warrior.feel().is_wall():
+            warrior.pivot_()
         elif warrior.feel().is_empty():
-            if warrior.health() == 20 or self.prev_health > warrior.health():
-                warrior.walk_() 
-            else:
-                warrior.rest_()
+            warrior.walk_()
         else:
             warrior.attack_()
-        self.prev_health = warrior.health()
         return None  # Your code here
